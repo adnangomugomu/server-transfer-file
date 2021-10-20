@@ -1,5 +1,5 @@
 ###################
-Server Komputer By GOmugomu
+Server Komputer By Gomugomu
 ###################
 
 transfer file via localhost, tidak perlu susah-susah colok kabel USB atau konek bluetooth,

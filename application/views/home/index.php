@@ -57,8 +57,8 @@
                                 <thead class="bg-dark text-white">
                                     <tr>
                                         <th class="text-center">File</th>
-                                        <th style="width: 100px;" class="text-center">Size</th>
-                                        <th style="width: 100px;" class="text-center">Aksi</th>
+                                        <th class="text-center">Size</th>
+                                        <th class="text-center">Aksi</th>
                                     </tr>
                                 </thead>
                                 <tbody>

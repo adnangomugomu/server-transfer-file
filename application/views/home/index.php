@@ -16,6 +16,11 @@
             table-layout: fixed;
             word-wrap: break-word;
         }
+
+        .dropzone.dz-clickable {
+            border: none !important;
+            border-radius: 30px;
+        }
     </style>
 </head>
 

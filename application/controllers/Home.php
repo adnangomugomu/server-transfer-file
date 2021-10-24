@@ -94,4 +94,29 @@ class Home extends CI_Controller
 			]);
 		}
 	}
+
+	public function download($path_lokasi)
+	{
+		$path = FCPATH . 'uploads/' . $path_lokasi;
+		if (is_file($path)) {
+			// get the file mime type using the file extension
+			$this->load->helper('file');
+
+			$mime = get_mime_by_extension($path);
+
+			// Build the headers to push out the file properly.
+			header('Pragma: public');     // required
+			header('Expires: 0');         // no cache
+			header('Cache-Control: must-revalidate, post-check=0, pre-check=0');
+			header('Last-Modified: ' . gmdate('D, d M Y H:i:s', filemtime($path)) . ' GMT');
+			header('Cache-Control: private', false);
+			header('Content-Type: ' . $mime);  // Add the mime type from Code igniter.
+			header('Content-Disposition: attachment; filename="' . basename($path_lokasi) . '"');  // Add the file name
+			header('Content-Transfer-Encoding: binary');
+			header('Content-Length: ' . filesize($path)); // provide file size
+			header('Connection: close');
+			readfile($path); // push it out
+			exit();
+		}
+	}
 }

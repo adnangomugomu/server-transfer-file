@@ -80,7 +80,7 @@
                                 <td>${e.size}</td>
                                 <td class="text-center">
                                     <div class="btn-group" role="group">
-                                        <button data-path="${e.path}" type="button" class="btn btn-primary btn-sm tombol_download">
+                                        <button data-path="${e.name}" type="button" class="btn btn-primary btn-sm tombol_download">
                                             <i class="fa fa-download"></i>
                                         </button>
                                         <button data-path="${e.path}" type="button" class="btn btn-danger btn-sm tombol_hapus">
@@ -104,7 +104,7 @@
 
     function download_data(form) {
         var path = $(form).data('path');
-        var link = BASE + path;
+        var link = BASE + 'home/download/' + path;
         window.open(link, '_blank');
     }
 

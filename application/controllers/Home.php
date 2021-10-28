@@ -90,8 +90,9 @@ class Home extends CI_Controller
 		} else {
 			echo json_encode([
 				'status' => 'failed',
-				'msg' => 'Data gagal dihapus'
+				'msg' => 'Data gagal dihapus' 
 			]);
+			
 		}
 	}
 
